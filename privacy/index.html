@@ -57,7 +57,7 @@
 <main>
   <span class="eyebrow">Pixqo for Android</span>
   <h1>Privacy Policy</h1>
-  <p class="updated">Effective date: October 21, 2026</p>
+  <p class="updated">Effective date: October 27, 2026</p>
 
   <p>This policy explains how the <strong>Pixqo</strong> Android app (package <code>com.subirhazra.pixqo</code>) handles information. Pixqo is a free AI image generator made by Subir Hazra (HazraX Labs). It has no accounts, no ads and no analytics.</p>
 
@@ -66,7 +66,7 @@
     <ul>
       <li>Your images and prompt history stay on your phone.</li>
       <li>To create an image, your prompt is sent to Pollinations.ai, the image service Pixqo uses.</li>
-      <li><strong>AI Upscale</strong> runs entirely on your phone. Your image is never uploaded.</li>
+      <li><strong>AI Upscale</strong> runs on your phone. Only if you turn on <strong>Enhance faces</strong> is the image sent to Pixqo's server, processed in memory and never stored.</li>
       <li>If you <strong>report an image</strong>, the report is sent to us through Google Forms so we can review it.</li>
       <li>We don't sell data, show ads, or track you.</li>
     </ul>
@@ -86,7 +86,14 @@
   <p>Pixqo asks Pollinations to use its strict safety mode, and also blocks prompts for sexual content or content that sexualizes minors before they are sent.</p>
 
   <h2>3. AI Upscale (optional)</h2>
-  <p>Upscaling only happens when you tap <strong>Upscale 4x with AI</strong>. It runs entirely on your phone, using an AI model built into the app. The image is not uploaded anywhere, and the upscaled copy is saved only in the app's private storage on your phone. If the image you upscale is still online (not yet saved), the app first downloads it from the image service, just as it does when showing it.</p>
+  <p>Upscaling only happens when you tap <strong>Upscale with AI</strong>. The upscale itself runs on your phone, using an AI model built into the app, and the upscaled copy is saved only in the app's private storage on your phone. If the image you upscale is still online (not yet saved), the app first downloads it from the image service, just as it does when showing it.</p>
+  <p><strong>Enhance faces</strong> is an option in the upscale screen (on by default, and you can turn it off). When it's on, the image being upscaled is sent over HTTPS to Pixqo's own face-enhance server, which looks for human faces and sends back restored versions of them for your phone to blend in. On the server:</p>
+  <ul>
+    <li>the image is held in memory only while it's being processed (usually under a minute), and is never saved to disk, logged or kept;</li>
+    <li>no prompt, account, device ID or other information is sent with it;</li>
+    <li>your IP address is kept in memory for up to one hour, only to enforce fair-use limits, and is not written to disk or logged.</li>
+  </ul>
+  <p>With Enhance faces off, nothing is uploaded for upscaling.</p>
 
   <h2>4. Reporting an image</h2>
   <p>Any image can be reported from inside the app, without leaving it. When you send a report, the app submits it to our Google Form (a Google service; responses go to a private spreadsheet only we can see). A report contains:</p>
@@ -100,13 +107,13 @@
 
   <h2>5. App permissions</h2>
   <ul>
-    <li><strong>Internet</strong>: to create images and send reports.</li>
+    <li><strong>Internet</strong>: to create images, enhance faces and send reports.</li>
     <li><strong>Saving to your gallery</strong>: when you tap Save, Pixqo adds that image to <em>Pictures/Pixqo</em>. Pixqo doesn't read your existing photos. On Android 9 and older this uses the storage permission.</li>
     <li><strong>Vibration</strong>: for haptic feedback.</li>
   </ul>
 
   <h2>6. Sharing and selling</h2>
-  <p>We don't sell your information or share it with advertisers. Data is only sent to Pollinations.ai to create images, and to Google Forms when you report an image, as described above. We may disclose information if the law requires it.</p>
+  <p>We don't sell your information or share it with advertisers. Data is only sent to Pollinations.ai to create images, to Pixqo's own server when you use Enhance faces, and to Google Forms when you report an image, as described above. We may disclose information if the law requires it.</p>
 
   <h2>7. Security</h2>
   <p>All connections the app makes use HTTPS encryption. Data stored on your phone is protected by Android's app sandbox.</p>
